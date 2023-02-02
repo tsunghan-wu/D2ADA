@@ -44,7 +44,7 @@ class ActiveDataset:
 
     def get_trainset(self):
         # Mode: target_finetune or joint
-        if self.selection_iter == 1:
+        if self.selection_iter == 0:
             return self.src_label_dataset
         else:
             return ConcatDataset([self.src_label_dataset, self.trg_label_dataset])
